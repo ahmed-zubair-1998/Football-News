@@ -1,0 +1,13 @@
+<!doctype html>
+<title>News</title>
+</body>
+	<h2><a href="{{url_for('index')}}">Go To News</a>
+	<hr>
+	{% for article in arr %}
+		<div>
+			<img src={{ article['urlToImage'] }} />
+			<a href= {{ article['url'] }}>{{ article['title'] }}</a>
+			<p>{{ article['description'] }}</p>
+		</div>
+	{% endfor %}
+</body>
